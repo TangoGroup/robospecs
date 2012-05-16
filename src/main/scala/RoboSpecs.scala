@@ -31,7 +31,7 @@ trait RoboSpecsWithInstrumentation extends SpecificationStructure {
 	  def ^(fs: Fragments) = this(fs)
   }
   def instrumentedFragments: Fragments
-  lazy val robolectricConfig = new RobolectricConfig(new File("./src/main"))
+  lazy val robolectricConfig = new RobolectricConfig(new File("."))
   lazy val resourceLoader = {
     val rClassName: String = robolectricConfig.getRClassName
     val rClass: Class[_] = Class.forName(rClassName)
